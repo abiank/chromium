@@ -57,10 +57,10 @@ bool SyncResourceHandler::OnRequestRedirected(
   // TODO(darin): It would be much better if this could live in WebCore, but
   // doing so requires API changes at all levels.  Similar code exists in
   // WebCore/platform/network/cf/ResourceHandleCFNet.cpp :-(
-  if (new_url.GetOrigin() != result_.final_url.GetOrigin()) {
-    LOG(ERROR) << "Cross origin redirect denied";
-    return false;
-  }
+//  if (new_url.GetOrigin() != result_.final_url.GetOrigin()) {
+//    LOG(ERROR) << "Cross origin redirect denied";
+//    return false;
+//  }
   result_.final_url = new_url;
   return true;
 }
